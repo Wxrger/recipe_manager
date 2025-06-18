@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Recipe Manager</title></head>
+<body>
+  <h1>My Recipes</h1>
+  <a href="/add">Add New Recipe</a>
+  <ul>
+    {% for recipe in recipes %}
+      <li><a href="/recipe/{{ loop.index0 }}">{{ recipe.name }}</a> - <a href="/delete/{{ loop.index0 }}">Delete</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
